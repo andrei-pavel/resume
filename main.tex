@@ -1,0 +1,185 @@
+%------------------------------------------------------------------------------
+%    PACKAGES AND DOCUMENT CONFIGURATIONS
+%------------------------------------------------------------------------------
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\usepackage[scale=0.75]{geometry}
+
+\usepackage{color}
+\definecolor{myblue}{rgb}{0.21875, 0.44921875, 0.69921875}
+\definecolor{mygray}{rgb}{0.20, 0.35, 0.50}
+\definecolor{linkcolor}{rgb}{0.0, 0.0, 0.93359375}
+
+\usepackage{comment}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% smileys
+\usepackage{MnSymbol,wasysym}
+
+%------------------------------------------------------------------------------
+%   CONTENT
+%------------------------------------------------------------------------------
+\firstname{Andrei}
+\familyname{Pavel}
+
+\title{curriculum vitae}
+\address{}{Bucharest, Romania}
+\mobile{+40 (0)748 220 135}
+\email{andrei.pavel@cti.pub.ro}
+\homepage{github.com/andrei-pavel}{https://github.com/andrei-pavel}
+\photo[96pt][0.1pt]{pictures/portrait}
+\begin{comment}
+supporter of code correctness, performance, legibility\\
+\end{comment}
+\quote{working on Linux with C++, D, Dart, Flutter, Go, Rust\\
+`by the way I use Arch Linux' --- geek meme \smiley{}\\
+`Don't settle.' --- Steve Jobs
+}
+
+\begin{document}
+\makecvtitle{}
+
+
+\section{technical skills \textsuperscript{(list is not exhaustive)}}
+
+\cvitem{advanced}{\
+  % \textbf{Android}: - \newline{}
+  \textbf{C}: C11, user-level, Arduino-dialect, OpenMP, MPI, pthread \newline{}
+  \textbf{C++}: C++17, STL, boost, CUDA, OpenGL, autotools, meson, lcov, cppcheck, clang-tools \newline{}
+  % {\color{gray} \textbf{C\#}: Windows Forms \newline{}}
+  % \textbf{D}: - \newline{}
+  \textbf{Databases}: Cassandra, CouchDB, MSSQL, MariaDB, PostgreSQL, Oracle, Sybase, sqlite \newline{}
+  \textbf{Debugging}: cgdb, gdb, gdbgui, lldb, rr \newline{}
+  % {\color{gray} \textbf{Haskell}: - \newline{}}
+  \textbf{Markup}: bpml, css, dtd, json, html, latex, markdown, xml, xsd, xsl \newline{}
+  % {\color{gray} \textbf{Java}: JDBC \newline{}}
+  % {\textbf{Javascript}: Angular.js, node.js \newline{}}
+  \textbf{Go}: goroutines, reflection, BLE, ORMs, socket.io  \newline{}
+  % \textbf{rust}: - \newline{}
+  \textbf{Networking}: DHCP, DNS, TCP, UDP ip, iw, nftables, ss, tc, tcpdump, Wireshark \newline{}
+  \textbf{Operating systems}: Linux, bash, zsh, sed, ripgrep, vim \newline{}
+  % \textbf{php}: idiorm \newline{}
+  \textbf{Version control}: git \newline{}
+  \textbf{Virtualization}: Docker, docker-compose, Helm, Kubernetes, KVM, libvirt, virsh, QEMU \newline{}
+}
+
+
+\section{work experience (4 years, 1 month) \textsuperscript{(list is not exhaustive)}}
+
+\cventry{\
+  \center{}
+  May 2016 --- present\\(3 years)
+  \\\includegraphics[width=\hintscolumnwidth]{pictures/qualitance}
+}{\color{myblue} Software Engineer (formerly Junior C++ Developer)}{\textbf{\textsc{Qualitance}}}{Romania}{}{\
+  \textbf{Kea: open-source Linux DHCP server, C++, enhancements}\\
+  Pull requests to ISC ({\color{myblue}\url{https://github.com/isc-projects/kea/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr+author\%3AandreipavelQ}}).
+  \begin{itemize}
+    \item \textbf{Cassandra} data sources
+    \item DHCPv6 features and features that help migrate to DHCPv6 e.g.\ lighweight-4o6 DHCP options
+    \item \textbf{Robot Framework} automated system-testing
+    \item live, persistent server reconfiguration
+    \item integration with Sysrepo data source, NETCONF protocol, YANG model
+  \end{itemize}
+  \textbf{Backend for Bullguard, antivirus for Mac OS X -> C++, unit tests}
+  \begin{itemize}
+    \item scanning \& quarantining of all file types
+    \item updating the virus database
+  \end{itemize}
+  \textbf{Runlock: smart-lock system}
+  \begin{itemize}
+    \item BLE beacon advertising \& GATT communication
+    \item Electronic access control of doorlocks using Assa Abloy protocol
+    \item REST
+  \end{itemize}
+}
+
+\begin{comment}
+\cventry{\
+  \center
+  April 2016\\(1 month)
+  \\\includegraphics[width=\hintscolumnwidth]{pictures/luxoft}
+}{\color{myblue} Software Developer}{\textbf{\textsc{Luxoft}}}{Romania}{}{\
+  Ended commitment while on trial.
+}
+\end{comment}
+
+\cventry{\
+  \center{}
+  August 2014 --- October 2015 (1 year, \\2 months)
+  \\\includegraphics[width=\hintscolumnwidth]{pictures/misys}
+}
+{\color{myblue} Associate Software Engineer}
+{\textbf{\textsc{Misys Financial Software}}}{Romania}{}{\
+  Development of treasury and capital markets software
+  \begin{itemize}
+    \item Implemented support for Negative Rates in Money Market Rollover (3 months).
+    \item Maintenance and bug-solving (12 months).
+    \item Worked with services distributed using CORBA across Windows, UNIX, Solaris querying Oracle, MSSQL, Sybase databases.
+    \item Developed business objects (C++) and front-end functionality (C\#) for Summit.
+          \newline{}
+  \end{itemize}
+}
+
+\cventry{\
+  \center{}
+  June 2013 --- October 2013 (3 months)
+  \\\includegraphics[width=\hintscolumnwidth]{pictures/intel}
+}{\color{myblue} Software Engineering Intern}{\textbf{\textsc{Intel\textsuperscript{\textregistered}}}}{Romania}{}{\
+  Application development and performance optimizations in the high performance computing
+  \newline{}
+  Accomplishments:
+  \begin{itemize}
+    \item Contributed to the development of parallel applications designed to benchmark HPC devices.
+    \item Benchmarked the Intel\textsuperscript{\textregistered} XeonPhi\textsuperscript{TM} coprocessor during the early days of it's release.
+    \item Used C, C++, OpenMP, native threading, low level intrinsics for more fine grained optimizations, Intel\textsuperscript{\textregistered} vTune\textsuperscript{TM} Amplifier for profiling and characterization studies.
+          \newline{}
+  \end{itemize}
+}
+
+\section{books \textsuperscript{(list is not exhaustive)}}
+
+\cventry{currently reading}{The way to Go}{by Ivo Balbaert}{}{}
+{{\color{linkcolor} \url{https://www.goodreads.com/book/show/13553772-the-way-to-go}}}
+
+\cventry{latest read}{Seven Databases in Seven Weeks: A Guide to Modern Databases and the NoSQL Movement }{by Eric Redmond}{}{}
+{{\color{linkcolor} \url{https://www.goodreads.com/book/show/25334471-optimizing-software-in-c}}}
+
+\cventry{more on Goodreads}{{\color{linkcolor} \url{https://www.goodreads.com/user/show/63238106-andrei-pavel}}}{}{}{}
+{}
+
+
+\section{portfolio \textsuperscript{(list is not exhaustive)}}
+
+\cventry{2017--2018}{curate-pkg}{aggregates all package managers under one tool}{}{}
+{{\color{linkcolor} \url{https://github.com/andrei-pavel/curate-pkg}}}
+
+\cventry{2015}{Make Monitor}{monitors compilation progress of make projects, written in C\#}{}{}
+{{\color{linkcolor} \url{https://github.com/andrei-pavel/MakeMonitor}}}
+
+\cventry{2014}{Rapunzel}{simulation and rendering of hair in real time using GPGPU techniques}{}{}
+{{\color{linkcolor} \url{https://github.com/andrei-pavel/rapunzel}}}
+
+\section{studies \textsuperscript{(list is not exhaustive)}}
+
+%\cventry{2014--2016}{\color{myblue} Masters of Computer Science}{Politehnica University of Bucharest}{Romania}{}{Advanced Software Services}
+%\cvitem{Thesis}{\emph{\textbf{Acceleration of OCR algorithms using GPGPU techniques}} \newline{}
+%Acceleration of clustering methods in OCR algorithms using non-conventional architecture that is inherently available in a holistic system performing image acquisition. Still in progress.}
+%\cvitem{Supervisors}{Professor Florin Rădulescu}
+
+\cventry{2010--2014}{\color{myblue} Bachelor of Computer Science}{Politehnica University of Bucharest}{Romania}{}{Automatic Control and Computer Science with major in Computer Systems Architecture}
+\cvitem{Thesis}{\emph{\textbf{Simulation and rendering of hair in real time using GPGPU techniques}} \newline{}
+  an algorithmic approach to the problem of real time simulation and rendering of hair in a highly-parallel multi-core environment}
+
+
+\section{languages}
+
+\cvitemwithcomment{Mothertongue}{Romanian}{}
+\cvitemwithcomment{Advanced}{English}{conversationally fluent}
+\cvitemwithcomment{Basic}{French}{basic words and phrases only}
+
+\end{document}
