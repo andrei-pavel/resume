@@ -8,6 +8,6 @@ lint:
 	chktex ./main.tex
 
 pdf:
-	while true; do printf '\n'; done | latexmk -pdf -f
+	while true; do printf '\n'; done | latexmk -f -pdf -quiet ./main.tex
 
 .PHONY: format lint pdf
