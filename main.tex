@@ -15,6 +15,48 @@
 
 \usepackage{comment}
 
+% Date diff
+\usepackage{datenumber}
+\newcounter{datetoday}
+\newcounter{diffdays}
+\newcounter{diffmonths}
+\newcounter{diffyears}
+\newcommand{\difftoday}[3]{%
+      \setmydatenumber{datetoday}{\the\year}{\the\month}{\the\day}%
+      \setmydatenumber{diffdays}{#1}{#2}{#3}%
+      \addtocounter{diffdays}{-\thedatetoday}%
+      \ifnum\value{diffdays}=0
+        \def\diffbefore{in }%
+        \def\diffafter{}%
+      \else
+        \def\diffbefore{}%
+        \setcounter{diffdays}{-\value{diffdays}}%
+      \fi
+      \setcounter{diffyears}{\value{diffdays}/365}%
+      \setcounter{diffdays}{\value{diffdays}-365*\value{diffyears}}%
+      \setcounter{diffmonths}{\value{diffdays}/30}%
+      \setcounter{diffdays}{\value{diffdays}-30*\value{diffmonths}}%
+      %
+      \diffbefore%
+      \ifnum\value{diffyears}=0
+      \else
+        \ifnum\value{diffyears}>1
+            \thediffyears{\space}years,
+        \else
+            \thediffyears{\space}year,
+        \fi
+      \fi
+      \ifnum\value{diffmonths}=0
+      \else
+        \ifnum\value{diffmonths}>1
+            \thediffmonths{\space}months%
+        \else
+            \thediffmonths{\space}month%
+        \fi
+      \fi
+      \diffafter%
+}%
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
@@ -69,11 +111,11 @@ supporter of code correctness, performance, legibility\\
 }
 
 
-\section{work experience (5 years, 1 month)}
+\section{work experience ({\difftoday{2014}{11}{01}})}
 
 \cventry{\
   \center{}
-  May 2016 --- present\\(3 years, 7 months)
+  May 2016 --- present\\({\difftoday{2016}{05}{09}})
   \\\includegraphics[width=\hintscolumnwidth]{pictures/qualitance}
 }{\color{myblue} Software Engineer (formerly Junior C++ Developer)}{\textbf{\textsc{Qualitance}}}{Romania}{}{\
   \textbf{Kea: open-source Linux DHCP server, C++, enhancements}\\
