@@ -6,7 +6,7 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 
-\usepackage[scale=0.75]{geometry}
+\usepackage[scale=0.79]{geometry}
 
 \usepackage{color}
 \definecolor{myblue}{rgb}{0.21875, 0.44921875, 0.69921875}
@@ -78,9 +78,9 @@
 \begin{comment}
 supporter of code correctness, performance, legibility\\
 \end{comment}
-\quote{working on Linux with C++, D, Dart, Flutter, Go, Rust\\
-`by the way I use Arch Linux' --- geek meme \smiley{}\\
-`Don't settle.' --- Steve Jobs
+\quote{true-stack on Linux with C++, D, Dart, Flutter, Go, Rust\\
+% `by the way I use Arch Linux' --- geek meme \smiley{}\\
+% `Don't settle.' --- Steve Jobs
 }
 
 \begin{document}
@@ -89,26 +89,35 @@ supporter of code correctness, performance, legibility\\
 
 \section{technical skills}
 
-\cvitem{advanced}{\
-  % \textbf{Android}: - \newline{}
-  \textbf{C}: C11, user-level, Arduino-dialect, OpenMP, MPI, pthread \newline{}
-  \textbf{C++}: C++17, STL, boost, CUDA, OpenGL, autotools, meson, lcov, cppcheck, clang-tools \newline{}
-  % {\color{gray} \textbf{C\#}: Windows Forms \newline{}}
-  % \textbf{D}: - \newline{}
-  \textbf{Databases}: Cassandra, CouchDB, MSSQL, MariaDB, PostgreSQL, Oracle, Sybase, sqlite \newline{}
-  \textbf{Debugging}: cgdb, gdb, gdbgui, lldb, rr \newline{}
-  % {\color{gray} \textbf{Haskell}: - \newline{}}
-  \textbf{Markup}: bpml, css, dtd, json, html, latex, markdown, xml, xsd, xsl \newline{}
-  % {\color{gray} \textbf{Java}: JDBC \newline{}}
-  % {\textbf{Javascript}: Angular.js, node.js \newline{}}
-  \textbf{Go}: goroutines, reflection, BLE, ORMs, websockets, socket.io \newline{}
-  % \textbf{rust}: - \newline{}
-  \textbf{Networking}: DHCP, DNS, TCP, UDP ip, iw, nftables, ss, tc, tcpdump, Wireshark \newline{}
-  \textbf{Operating systems}: Linux, bash, zsh, sed, ack, ripgrep, vim \newline{}
-  % \textbf{php}: idiorm \newline{}
-  \textbf{Version control}: git \newline{}
-  \textbf{Virtualization}: Docker, docker-compose, Helm, Kubernetes, KVM, libvirt, virsh, QEMU \newline{}
+\cvitem{advanced}{{} \newline{}
+  {\color{gray}   \textbf{Android}: Java, Kotlin} \newline{}
+  {\color{gray}   \textbf{C}: C11, user-level, Arduino-dialect, OpenMP, MPI, pthread} \newline{}
+  {\color{myblue} \textbf{C++}: C++2a, casting, constness, dynamic loading, initialization order, inheritance, linkage, memory management, pointers, references, move semantics, preproessor, synchronization in concurrent programming, templates, STL, boost, CUDA, OpenGL, autotools, meson, lcov, cppcheck, clang-tools} \newline{}
+  {\color{myblue} \textbf{Databases}: Cassandra, CouchDB, MSSQL, MariaDB, PostgreSQL, Oracle, Sybase, Sysrepo, sqlite} \newline{}
+  {\color{myblue} \textbf{Debugging}: cgdb, gdb, gdbgui, lldb, pdb, rr} \newline{}
+  {\color{myblue} \textbf{Go}: goroutines, reflection, BLE, ORMs, websockets, socket.io} \newline{}
+  {\color{myblue} \textbf{Operating systems}: Linux, bash, zsh, sed, ack, ripgrep, systemd, sys-v-init, vim} \newline{}
+  {\color{gray}   \textbf{Markup}: bpml, css, dtd, json, html, latex, markdown, xml, xsd, xsl, yang} \newline{}
+  {\color{myblue} \textbf{Protocols}: DHCP, DNS, TCP, UDP ip, iw, netconf, netopeer, nftables, ss, tc, tcpdump, Wireshark} \newline{}
+  {\color{myblue} \textbf{Version control}: git} \newline{}
+  {\color{myblue} \textbf{Virtualization}: Docker, docker-compose, Helm, Kubernetes, KVM, libvirt, virsh, QEMU} \newline{}
 }
+
+\cvitem{intermediate}{{} \newline{}
+  {\color{gray}   \textbf{C\#}: Windows Forms} \newline{}
+  {\color{myblue} \textbf{D}: mixins, templates} \newline{}
+  {\color{myblue} \textbf{Flutter}: asynchrony, Dart, generics, isolates, mixins, Provider} \newline{}
+  {\color{myblue} \textbf{Rust}: affine types, linkage, macros, mutability, object lifetime, unsafety} \newline{}
+}
+
+\begin{comment}
+\cvitem{beginner}{{} \newline{}
+  {\color{gray} \textbf{Functional}: Haskell, Scheme} \newline{}
+  {\color{gray} \textbf{Java}: JDBC} \newline{}
+  {\color{gray} \textbf{Javascript}: Angular.js, node.js} \newline{}
+  {\color{gray} \textbf{php}: idiorm} \newline{}
+}
+\end{comment}
 
 
 \section{work experience ({\difftoday{2014}{11}{01}})}
@@ -119,24 +128,24 @@ supporter of code correctness, performance, legibility\\
   \\\includegraphics[width=\hintscolumnwidth]{pictures/qualitance}
 }{\color{myblue} Software Engineer (formerly Junior C++ Developer)}{\textbf{\textsc{Qualitance}}}{Romania}{}{\
   \textbf{Kea: open-source Linux DHCP server, C++, enhancements}\\
-  Pull requests to ISC ({\color{myblue}\url{https://github.com/isc-projects/kea/pulls?utf8=\%E2\%9C\%93&q=is\%3Apr+author\%3AandreipavelQ}}).
+  Open-source contributions to CESNET, ISC, Sysrepo ({\color{linkcolor}\url{https://github.com/andrei-pavel}}).
   \begin{itemize}
-    \item \textbf{Cassandra} data sources
-    \item DHCPv6 features and features that help migrate to DHCPv6 e.g.\ lighweight-4o6 DHCP options
+    \item \textbf{Cassandra} ODM with multiple data sources
+    \item \textbf{DHCPv6} features and features that help migrate to DHCPv6 e.g.\ lighweight-4o6 DHCP options
     \item \textbf{Robot Framework} automated system-testing
     \item live, persistent server reconfiguration
     \item integration with Sysrepo data source, NETCONF protocol, YANG model
   \end{itemize}
-  \textbf{Backend for Bullguard, antivirus for Mac OS X -> C++, unit tests}
-  \begin{itemize}
-    \item scanning \& quarantining of all file types
-    \item updating the virus database
-  \end{itemize}
-  \textbf{Runlock: smart-lock system}
+  \textbf{Runlock: smart-lock system, development \& deployment \& unit tests}
   \begin{itemize}
     \item BLE beacon advertising \& GATT communication
     \item Electronic access control of doorlocks using Assa Abloy protocol
     \item REST
+  \end{itemize}
+  \textbf{Bullguard: antivirus backend for Mac OS X, C++, unit tests}
+  \begin{itemize}
+    \item scanning \& quarantining of all file types
+    \item updating the virus database
   \end{itemize}
 }
 
@@ -183,28 +192,37 @@ supporter of code correctness, performance, legibility\\
   \end{itemize}
 }
 
+
+\section{portfolio}
+
+\cventry{2019-2020}{Radio România Actualităti Podcasts}{Podcast app written in Dart with Flutter}{}{}
+{{\color{linkcolor} \url{https://play.google.com/store/apps/details?id=ro.radioromaniaactualitati.podcasts}
+      \newline{}}}
+
+\cventry{2018--2020}{bash-boilerplate}{bootstrap your bash project with this handy boilerplate}{}{}
+{{\color{linkcolor} \url{https://github.com/andrei-pavel/bash-boilerplate}
+      \newline{}}}
+
+\cventry{2018--2019}{go-boilerplate}{bootstrap your go project with this full-fledged boilerplate}{}{}
+{{\color{linkcolor} \url{https://github.com/andrei-pavel/go-boilerplate}
+      \newline{}}}
+
+\cventry{2014}{Rapunzel}{simulation and rendering of hair in real time using GPGPU techniques}{}{}
+{{\color{linkcolor} \url{https://github.com/andrei-pavel/rapunzel}
+      \newline{}}}
+
+
 \section{books}
 
-\cventry{currently reading}{The way to Go}{by Ivo Balbaert}{}{}
+\cventry{currently reading}{\textbf{The way to Go}}{by Ivo Balbaert}{}{}
 {{\color{linkcolor} \url{https://www.goodreads.com/book/show/13553772-the-way-to-go}}}
 
-\cventry{latest read}{Seven Databases in Seven Weeks: A Guide to Modern Databases and the NoSQL Movement }{by Eric Redmond}{}{}
+\cventry{latest read}{\textbf{Seven Databases in Seven Weeks: A Guide to Modern Databases and the NoSQL Movement}}{by Eric Redmond}{}{}
 {{\color{linkcolor} \url{https://www.goodreads.com/book/show/25334471-optimizing-software-in-c}}}
 
 \cventry{more on Goodreads}{{\color{linkcolor} \url{https://www.goodreads.com/user/show/63238106-andrei-pavel}}}{}{}{}
 {}
 
-
-\section{portfolio}
-
-\cventry{2019}{Radio România Actualităti Podcasts}{Android app written in Dart with Flutter\#}{}{}
-{{\color{linkcolor} \url{https://play.google.com/store/apps/details?id=ro.radioromaniaactualitati.podcasts}}}
-
-\cventry{2017--2018}{portunus}{aggregates all package managers under one tool}{}{}
-{{\color{linkcolor} \url{https://github.com/andrei-pavel/portunus}}}
-
-\cventry{2014}{Rapunzel}{simulation and rendering of hair in real time using GPGPU techniques}{}{}
-{{\color{linkcolor} \url{https://github.com/andrei-pavel/rapunzel}}}
 
 \section{studies}
 
