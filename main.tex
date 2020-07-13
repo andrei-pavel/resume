@@ -4,14 +4,15 @@
 \documentclass[10pt,a4paper,sans]{moderncv}
 
 \moderncvstyle{classic}
-\moderncvcolor{blue}
+\moderncvcolor{white}
 
-\usepackage[scale=0.79]{geometry}
+\usepackage[scale=0.81]{geometry}
 
 \usepackage{color}
-\definecolor{myblue}{rgb}{0.21875, 0.44921875, 0.69921875}
-\definecolor{mygray}{rgb}{0.20, 0.35, 0.50}
-\definecolor{linkcolor}{rgb}{0.0, 0.0, 0.93359375}
+\definecolor{mydarkgray}{rgb}{0.15, 0.15, 0.15}
+\definecolor{myblue}{rgb}{0.32, 0.64, 1.0}
+\definecolor{mygray}{rgb}{0.16, 0.32, 0.48}
+\definecolor{linkcolor}{rgb}{0.32, 0.64, 1.0}
 
 \usepackage{comment}
 
@@ -60,6 +61,12 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
+\usepackage{xcolor}
+\usepackage{pagecolor}
+
+\pagecolor{mydarkgray}
+\color{white}
+
 % smileys
 \usepackage{MnSymbol,wasysym}
 
@@ -78,7 +85,7 @@
 \begin{comment}
 supporter of code correctness, performance, legibility\\
 \end{comment}
-\quote{true-stack on Linux with C++, D, Dart, Flutter, Go, Rust\\
+\quote{I work best on Linux with C++, D, Dart, Flutter, Go, Rust\\
 % `by the way I use Arch Linux' --- geek meme \smiley{}\\
 % `Don't settle.' --- Steve Jobs
 }
@@ -90,24 +97,25 @@ supporter of code correctness, performance, legibility\\
 \section{technical skills}
 
 \cvitem{advanced}{{} \newline{}
-  {\color{gray}   \textbf{Android}: Java, Kotlin} \newline{}
-  {\color{gray}   \textbf{C}: C11, user-level, Arduino-dialect, OpenMP, MPI, pthread} \newline{}
-  {\color{myblue} \textbf{C++}: C++2a, casting, constness, dynamic loading, initialization order, inheritance, linkage, memory management, pointers, references, move semantics, preproessor, synchronization in concurrent programming, templates, STL, boost, CUDA, OpenGL, autotools, meson, lcov, cppcheck, clang-tools} \newline{}
-  {\color{myblue} \textbf{Databases}: Cassandra, CouchDB, MSSQL, MariaDB, PostgreSQL, Oracle, Sybase, Sysrepo, sqlite} \newline{}
-  {\color{myblue} \textbf{Debugging}: cgdb, gdb, gdbgui, lldb, pdb, rr} \newline{}
-  {\color{myblue} \textbf{Go}: goroutines, reflection, BLE, ORMs, websockets, socket.io} \newline{}
-  {\color{myblue} \textbf{Operating systems}: Linux, bash, zsh, sed, ack, ripgrep, systemd, sys-v-init, vim} \newline{}
-  {\color{gray}   \textbf{Markup}: bpml, css, dtd, json, html, latex, markdown, xml, xsd, xsl, yang} \newline{}
-  {\color{myblue} \textbf{Networking}: DHCP, DNS, TCP, UDP ip, iw, netconf, netopeer, nftables, ss, tc, tcpdump, Wireshark} \newline{}
-  {\color{myblue} \textbf{Version control}: git} \newline{}
-  {\color{myblue} \textbf{Virtualization}: Docker, docker-compose, Helm, Kubernetes, KVM, libvirt, virsh, QEMU} \newline{}
+  %  {\color{myblue}   \textbf{Android}: Java, Kotlin} \newline{}
+  {\color{myblue} \textbf{C}}: C11, user-level, Arduino-dialect, OpenMP, MPI, pthreads \newline{}
+  {\color{myblue} \textbf{C++}}: C++2a, casting, constness, dynamic loading, initialization order, inheritance, linkage, memory management, pointers, references, move semantics, preproessor, synchronization in concurrent programming, templates, STL, boost, CUDA, OpenGL, autotools, meson, lcov, cppcheck, clang-tools \newline{}
+  {\color{myblue} \textbf{Databases}}: Cassandra, CouchDB, MSSQL, MariaDB, PostgreSQL, Oracle, Sybase, Sysrepo, sqlite \newline{}
+  {\color{myblue} \textbf{Debugging}}: cgdb, gdb, gdbgui, lldb, pdb, rr \newline{}
+  {\color{myblue} \textbf{Go}}: goroutines, reflection, BLE, ORMs, websockets, socket.io \newline{}
+  {\color{myblue} \textbf{Operating systems}}: Linux, systemd, sys-v-init, vim \newline{}
+  {\color{myblue} \textbf{Scripting}}: bash, zsh, sed, ack, ripgrep \newline{}
+  {\color{myblue} \textbf{Markup}}: bpml, css, dtd, json, html, latex, markdown, xml, xsd, xsl, yang \newline{}
+  {\color{myblue} \textbf{Networking}}: DHCP, DNS, TCP, UDP ip, iw, netconf, netopeer, nftables, ss, tc, tcpdump, Wireshark \newline{}
+  {\color{myblue} \textbf{Version control}}: git \newline{}
+  {\color{myblue} \textbf{Virtualization}}: Docker, docker-compose, Helm, Kubernetes, KVM, libvirt, virsh, QEMU \newline{}
 }
 
-\cvitem{intermediate}{{} \newline{}
-  {\color{gray}   \textbf{C\#}: Windows Forms} \newline{}
-  {\color{myblue} \textbf{D}: mixins, templates} \newline{}
-  {\color{myblue} \textbf{Flutter}: asynchrony, Dart, generics, isolates, mixins, Provider} \newline{}
-  {\color{myblue} \textbf{Rust}: affine types, linkage, macros, mutability, object lifetime, unsafety} \newline{}
+\cvitem{intermediate, but excited about}{{} \newline{}
+  %  {\color{myblue}   \textbf{C\#}: Windows Forms} \newline{}
+  {\color{myblue} \textbf{D}}: mixins, templates \newline{}
+  {\color{myblue} \textbf{Flutter}}: asynchrony, Dart, generics, isolates, mixins, Provider \newline{}
+  {\color{myblue} \textbf{Rust}}: affine types, linkage, macros, mutability, object lifetime, unsafety \newline{}
 }
 
 \begin{comment}
@@ -124,8 +132,8 @@ supporter of code correctness, performance, legibility\\
 
 \cventry{\
   \center{}
+  \\\includegraphics[width=\hintscolumnwidth]{pictures/qualitance-transparent}
   May 2016 --- present\\({\difftoday{2016}{05}{09}})
-  \\\includegraphics[width=\hintscolumnwidth]{pictures/qualitance}
 }{\color{myblue} Software Engineer (formerly Junior C++ Developer)}{\textbf{\textsc{Qualitance}}}{Romania}{}{\
   \textbf{Kea: open-source DHCP server, C++, enhancements}\\
   \textbf{Open-source contributions to CESNET, ISC, Sysrepo}
@@ -137,11 +145,11 @@ supporter of code correctness, performance, legibility\\
     \item {\color{linkcolor} \url{https://github.com/CESNET/Netopeer2/pulls?q=author\%3Aandrei-pavel}}
   \end{itemize}
   \begin{itemize}
-    \item \textbf{Cassandra} ODM with multiple data sources
+    \item support for \textbf{Cassandra} operations with multiple data sources
     \item \textbf{DHCPv6} features and features that help migrate to DHCPv6 e.g.\ lighweight-4o6 DHCP options
     \item \textbf{Robot Framework} automated system-testing
     \item live, persistent server reconfiguration
-    \item integration with Sysrepo data source, NETCONF protocol, YANG model
+    \item integration with Sysrepo data source, NETCONF protocol, YANG models
   \end{itemize}
   \textbf{Runlock: smart-lock system, development \& deployment \& unit tests}
   \begin{itemize}
@@ -168,8 +176,8 @@ supporter of code correctness, performance, legibility\\
 
 \cventry{\
   \center{}
+  \\\includegraphics[width=\hintscolumnwidth]{pictures/misys-transparent}
   August 2014 --- October 2015 (1 year, \\2 months)
-  \\\includegraphics[width=\hintscolumnwidth]{pictures/misys}
 }
 {\color{myblue} Associate Software Engineer}
 {\textbf{\textsc{Misys Financial Software}}}{Romania}{}{\
@@ -185,12 +193,11 @@ supporter of code correctness, performance, legibility\\
 
 \cventry{\
   \center{}
+  \\\includegraphics[width=\hintscolumnwidth]{pictures/intel-transparent}
   June 2013 --- October 2013 (3 months)
-  \\\includegraphics[width=\hintscolumnwidth]{pictures/intel}
 }{\color{myblue} Software Engineering Intern}{\textbf{\textsc{Intel\textsuperscript{\textregistered}}}}{Romania}{}{\
   Application development and performance optimizations in the high performance computing
   \newline{}
-  Accomplishments:
   \begin{itemize}
     \item Contributed to the development of parallel applications designed to benchmark HPC devices.
     \item Benchmarked the Intel\textsuperscript{\textregistered} XeonPhi\textsuperscript{TM} coprocessor during the early days of it's release.
