@@ -1,4 +1,7 @@
-default: format lint pdf
+default: clean format lint pdf
+
+clean:
+	git clean -dffx .
 
 format:
 	latexindent -l=./latexindent.yaml ./main.tex > ./tmp.tex && mv ./tmp.tex ./main.tex || true
@@ -10,4 +13,4 @@ lint:
 pdf:
 	while true; do printf '\n'; done | latexmk -f -pdf -quiet ./main.tex
 
-.PHONY: format lint pdf
+.PHONY: clean format lint pdf
