@@ -11,6 +11,6 @@ lint:
 	chktex ./main.tex || true
 
 pdf:
-	while true; do printf '\n'; done | latexmk -f -pdf -quiet ./main.tex
+	latexmk -f -pdf -quiet ./main.tex || true
 
 .PHONY: clean format lint pdf

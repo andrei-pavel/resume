@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+jobs:
+  update-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y \
+            chktex lacheck \
+            latexmk liblog-log4perl-perl \
+            texlive texlive-extra-utils texlive-fonts-extra
+      - name: build
+        run: make
+      - name: push
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add -u
+          git commit -m '🆙 UPDATE monthly'
+          git push
