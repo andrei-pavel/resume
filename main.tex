@@ -42,17 +42,17 @@
       \ifnum\value{diffyears}=0
       \else
         \ifnum\value{diffyears}>1
-            \thediffyears{\space}years,
+            \thediffyears{\space}years
         \else
-            \thediffyears{\space}year,
+            \thediffyears{\space}year
         \fi
       \fi
       \ifnum\value{diffmonths}=0
       \else
         \ifnum\value{diffmonths}>1
-            \thediffmonths{\space}months%
+            , \thediffmonths{\space}months%
         \else
-            \thediffmonths{\space}month%
+            , \thediffmonths{\space}month%
         \fi
       \fi
       \diffafter%
@@ -128,6 +128,8 @@ supporter of code correctness, performance, legibility\\
 }
 \end{comment}
 
+\pagebreak{}
+
 
 \section{work experience ({\difftoday{2014}{11}{01}})}
 
@@ -135,7 +137,7 @@ supporter of code correctness, performance, legibility\\
   \center{}
   \\\includegraphics[width=\hintscolumnwidth]{pictures/isc-transparent}
   October 2020 --- present\\({\difftoday{2020}{10}{01}})
-}{\color{myblue} QA \& Support Engineer}{\textbf{\textsc{Internet Systems Consortium}}}{Remote}{}{\
+}{\color{myblue} Software Engineer (formerly QA \& Support Engineer)}{\textbf{\textsc{Internet Systems Consortium}}}{Remote}{}{\
   \textbf{Kea: open-source DHCP server, C++}
 }
 
@@ -214,6 +216,8 @@ supporter of code correctness, performance, legibility\\
           \newline{}
   \end{itemize}
 }
+
+\pagebreak{}
 
 
 \section{portfolio}
